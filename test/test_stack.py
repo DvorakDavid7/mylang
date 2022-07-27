@@ -13,6 +13,7 @@ class StackTest(unittest.TestCase):
         stack: Stack = Stack()
         res = stack.top()
 
+        self.assertTrue(stack.is_empty())
         self.assertEqual(res, "")
 
 
@@ -27,6 +28,7 @@ class StackTest(unittest.TestCase):
         res = stack.top()
 
         self.assertEqual(res, "a")
+        self.assertFalse(stack.is_empty())
 
     def test_pop(self):
         """

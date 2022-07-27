@@ -2,16 +2,23 @@ import unittest
 import src.mylang.runner as code_runner
 from src.mylang.stack import Stack
 
+
 class InstructionRunnerTest(unittest.TestCase):
-
-    @unittest.SkipTest
-    def test_run_instruction(self):
+    def test_run_program(self):
         instructions = [
-            "ADD"
-            "3"
-            "5"
-        ]
-        
-        stack: Stack = code_runner.execute_instructions(instructions)
+            "PRINT",
+            "SUB",
+            "8",
+            "3",
 
-        self.assertSetEqual(stack.top(), "8")
+            "PRINT",
+            "ADD",
+            "8",
+            "3",
+        ]
+        mem = Stack()
+
+        for i in instructions:
+            mem.push(i)
+
+        stack: Stack = code_runner.run_program(mem)

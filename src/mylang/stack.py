@@ -21,3 +21,12 @@ class Stack:
 
     def push(self, value: str):
         self.data.append(value)
+
+    def is_empty(self) -> bool:
+        return len(self.data) == 0
+
+    def __repr__(self) -> str:
+        res = ""
+        for v in self.data:
+            res += v + "\n"
+        return res
