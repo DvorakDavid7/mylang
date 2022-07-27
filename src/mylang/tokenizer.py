@@ -7,7 +7,7 @@ def get_tokens(source_code: str) -> List[str]:
     striped_lines = _strip_source(source_code)
 
     for command in striped_lines:
-        operation = command.split(" ")
+        operation = command.split()
         for token in operation:
             tokens.append(token)
 
