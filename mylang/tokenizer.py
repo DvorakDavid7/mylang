@@ -2,6 +2,11 @@ from typing import List
 
 
 def get_tokens(source_code: str) -> List[str]:
+    """
+    parse given source code to tokens
+    :param source_code:
+    :return: list of tokens
+    """
     tokens: List[str] = []
 
     striped_lines = _strip_source(source_code)

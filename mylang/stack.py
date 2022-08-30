@@ -1,6 +1,3 @@
-
-
-from operator import le
 from typing import List
 
 
@@ -27,6 +24,6 @@ class Stack:
 
     def __repr__(self) -> str:
         res = ""
-        for v in self.data:
-            res += v + "\n"
+        for i, val in enumerate(self.data):
+            res += val if i == len(self.data) - 1 else val + "\n"
         return res

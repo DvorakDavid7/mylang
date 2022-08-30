@@ -1,27 +1,26 @@
 import unittest
 
-from src.mylang.stack import Stack
+from mylang.stack import Stack
 
 
 class StackTest(unittest.TestCase):
-    
+
     def test_top(self):
         """
-        top of empyt stack
+        top of empty stack
         """
-        
+
         stack: Stack = Stack()
         res = stack.top()
 
         self.assertTrue(stack.is_empty())
         self.assertEqual(res, "")
 
-
     def test_push(self):
         """
         push value to empty stack
         """
-        
+
         stack: Stack = Stack()
 
         stack.push("a")
@@ -34,7 +33,7 @@ class StackTest(unittest.TestCase):
         """
         pop value
         """
-        
+
         stack: Stack = Stack()
 
         stack.push("a")
@@ -44,12 +43,11 @@ class StackTest(unittest.TestCase):
         self.assertEqual(poped_value, "a")
         self.assertEqual(res, "")
 
-
-    def test_pop(self):
+    def test_pop_from_empty_stack(self):
         """
         pop from empy stack
         """
-        
+
         stack: Stack = Stack()
 
         poped_value = stack.pop()
