@@ -32,11 +32,13 @@ def main():
 
 def _help():
     h = """usage:
-    python3 mylang.py program.dd
-    
-    or
-    
-    python3 mylang.py "1 2 ADD PRINT"
+Execute instructions
+    python3 mylang.py [filename].dd
+or
+    python3 mylang.py "[program]"
+
+run REPL mode
+    python3 mylang.py -r
     """
     print(h)
 
